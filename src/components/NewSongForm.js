@@ -8,6 +8,7 @@ const NewSongForm = ({ addSong }) => {
     addSong(title);
     setTitle('');
   };
+
   return (
     <form onSubmit={handlleSubmit}>
       <label>Song Name</label>
