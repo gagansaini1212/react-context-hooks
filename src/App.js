@@ -11,11 +11,11 @@ function App() {
   return (
     <div className="App">
       <ThemeContextProvider>
-        {/* <AuthContextProvider> */}
-        <Navbar />
-        <BookList />
-        <ThemeToggle />
-        {/* </AuthContextProvider> */}
+        <AuthContextProvider>
+          <Navbar />
+          <BookList />
+          <ThemeToggle />
+        </AuthContextProvider>
       </ThemeContextProvider>
     </div>
   );
