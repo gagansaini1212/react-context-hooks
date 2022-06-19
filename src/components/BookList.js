@@ -8,7 +8,7 @@ const BookList = () => {
   const { books } = useContext(BookContext);
 
   const theme = isLightTheme ? light : dark;
-  console.log(books, 'books');
+
   return (
     <div
       className="book-list"
