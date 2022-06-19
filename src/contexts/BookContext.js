@@ -5,19 +5,16 @@ export const BookContext = createContext();
 
 const BookContextProvider = (props) => {
   const [books, setBooks] = useState([
-    { id: 1, title: 'Name of the wind', author: 'Patrick rothfuss' },
-    { id: 2, title: 'The way of kings', author: 'Brandn Sanderson' },
-    { id: 3, title: 'The final empire', author: 'Lorem' },
-    { id: 4, title: 'The hero of ages', author: 'Lorem Ipsum' },
+    { title: 'name of the wind', author: 'patrick rothfuss', id: 1 },
+    { title: 'the final empire', author: 'brandon sanderson', id: 2 },
   ]);
-
   const addBook = (title, author) => {
-    setBooks(...books, { id: uuidv4(), title: title, author: author });
+    setBooks([...books, { title, author, id: uuidv4() }]);
   };
-
   const removeBook = (id) => {
     setBooks(books.filter((book) => book.id !== id));
   };
+
   return (
     <BookContext.Provider value={{ books, addBook, removeBook }}>
       {props.children}
